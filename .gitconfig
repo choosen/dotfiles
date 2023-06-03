@@ -1,0 +1,68 @@
+[color]
+	ui = true
+[user]
+	name = Piotr Wasiak
+	email = chooosen@gmail.com
+	# email = piotr.wasiak@spaceos.io
+	signingkey = 11B8A99485E02B8D
+
+[commit]
+#	gpgSign = true
+[gc]
+	autoDetach = false
+[alias]
+  l = log --pretty=format:'%C(yellow)%h%Creset - %Cblue%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  wtf = ! git log --pretty=tformat:\"%C(auto,yellow)%h%C(auto)%d%C(auto,reset) by %C(auto,blue)%cn%C(auto,reset), %C(auto,cyan)%ar%C(auto,reset)%n %s%n\" --stat
+  # s = status --short
+  # cam = commit -a -m
+  # st = status --short
+  # co = checkout
+  # aa = add --all
+[core]
+	excludesfile = /Users/piotrwasiak/.gitignore_global
+	attributesfile = /Users/piotrwasiak/.gitattributes
+[push]
+  default = current
+	autoSetupRemote = true
+[diff]
+  colorMoved = default
+[merge]
+  conflictstyle = diff3
+  # ff = true
+[pull]
+	rebase = false
+[diff "rspec"]
+  xfuncname = "^[ \t]*((RSpec|describe|context|it|before|after|around|feature|scenario)[ \t].*)$"
+  colorMoved = default
+[pager]
+    # diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[delta]
+    features = decorations navigate
+    line-numbers = true
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
+[secrets]
+	providers = git secrets --aws-provider
+	patterns = (A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}
+	patterns = (\"|')?(AWS|aws|Aws)?_?(SECRET|secret|Secret)?_?(ACCESS|access|Access)?_?(KEY|key|Key)(\"|')?\\s*(:|=>|=)\\s*(\"|')?[A-Za-z0-9/\\+=]{40}(\"|')?
+	patterns = (\"|')?(AWS|aws|Aws)?_?(ACCOUNT|account|Account)_?(ID|id|Id)?(\"|')?\\s*(:|=>|=)\\s*(\"|')?[0-9]{4}\\-?[0-9]{4}\\-?[0-9]{4}(\"|')?
+	allowed = AKIAIOSFODNN7EXAMPLE
+	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
