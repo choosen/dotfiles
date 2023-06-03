@@ -8,25 +8,31 @@ export RUBY_DEBUG_EDITOR=code
 
 export TEST_VERBOSITY=0
 
+#if [ "$OSTYPE" == linux-gnu ]; then  # Is this the Ubuntu system?
+#    alias ll='ls -Flh --group-directories-first'
+#else
+    alias ll='gls -Flh --group-directories-first'
+#fi
+
 # . /opt/homebrew/opt/asdf/libexec/asdf.sh
 # unset ASDF_DIR
 # source /opt/homebrew/opt/asdf/libexec/asdf.sh # $(brew --prefix asdf)/libexec/asdf.sh
 
-if [[ ! -f ~/.zpm/zpm.zsh ]]; then
-    git clone --recursive https://github.com/zpm-zsh/zpm ~/.zpm
-fi
+# if [[ ! -f ~/.zpm/zpm.zsh ]]; then
+#     git clone --recursive https://github.com/zpm-zsh/zpm ~/.zpm
+# fi
 
-source ~/.zpm/zpm.zsh
+# source ~/.zpm/zpm.zsh
 
-zpm load @omz
-zpm load zpm-zsh/ls 
-zpm load @omz/git @omz/bundler
-zpm load @omz/z \
-          @omz/rails \
-          @omz/git \
-          @omz-lib/key-bindings \
-          @omz-lib/completion \
-	  @omz/zsh-users/zsh-syntax-highlighting
+# zpm load @omz
+# zpm load zpm-zsh/ls
+# zpm load @omz/git @omz/bundler
+# zpm load @omz/z \
+#           @omz/rails \
+#           @omz/git \
+#           @omz-lib/key-bindings \
+#           @omz-lib/completion \
+# 	  @omz/zsh-users/zsh-syntax-highlighting
 
 # those not typeprof disabled:
 ####          @omz/asdf \
@@ -36,9 +42,9 @@ zpm load @omz/z \
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
 export POWERLEVEL9K_SHORTEN_DIR_LENGTH=7
 export POWERLEVEL9K_SHORTEN_STRATEGY=truncate_from_right
@@ -47,7 +53,7 @@ export POWERLEVEL9K_CHANGESET_HASH_LENGTH=18
 export HIST_STAMPS="yyyy.mm.dd"
 
 # # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export NVM_DIR=~/.nvm
 
