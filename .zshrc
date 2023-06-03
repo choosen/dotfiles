@@ -8,15 +8,10 @@ export RUBY_DEBUG_EDITOR=code
 
 export TEST_VERBOSITY=0
 
-#if [ "$OSTYPE" == linux-gnu ]; then  # Is this the Ubuntu system?
-#    alias ll='ls -Flh --group-directories-first'
-#else
-    alias ll='gls -Flh --group-directories-first'
-#fi
+# Use asdf local ruby instead of rbenv
 
-# . /opt/homebrew/opt/asdf/libexec/asdf.sh
+. /opt/homebrew/opt/asdf/libexec/asdf.sh # $(brew --prefix asdf)/libexec/asdf.sh
 # unset ASDF_DIR
-# source /opt/homebrew/opt/asdf/libexec/asdf.sh # $(brew --prefix asdf)/libexec/asdf.sh
 
 # if [[ ! -f ~/.zpm/zpm.zsh ]]; then
 #     git clone --recursive https://github.com/zpm-zsh/zpm ~/.zpm
