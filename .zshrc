@@ -64,7 +64,7 @@ export BAT_PAGER=" less -RFX --raw-control-chars"
 
 # creds
 
-source .creds
+source ~/.creds
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
