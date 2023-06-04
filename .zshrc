@@ -12,10 +12,31 @@ export TEST_VERBOSITY=0
 
 export PATH="/opt/homebrew/bin:$PATH"
 
+# ZSH HISTORY SETUP
+
+# Immediate append history
+setopt INC_APPEND_HISTORY
+# turn on timestamps
+setopt EXTENDED_HISTORY
+# skip duplicates
+setopt HIST_FIND_NO_DUPS
+# not writing duplicates to the history file at all
+setopt HIST_IGNORE_ALL_DUPS
+export HISTTIMEFORMAT="[%F %T] "
+export HISTSIZE=100000
+export HISTFILESIZE=1000000000
+
 # brew install asdf
 # source /opt/homebrew/opt/asdf/libexec/asdf.sh #
 source $(brew --prefix asdf)/libexec/asdf.sh
 # unset ASDF_DIR
+
+
+# For compilers to find curl you may need to set:
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/curl/lib/pkgconfig"
 
 eval "$(starship init zsh)"
 
@@ -98,3 +119,7 @@ fi
 # to load these completions, you may need to run this:
 
 #   chmod -R go-w '/opt/homebrew/share/zsh'
+
+# integrate fzf with zsh.
+# CTRL + R (better history), CTRL + T (select file to choose instead of ** + TAB), ESC + C (fzf directories passed to cd)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
