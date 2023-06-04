@@ -13,6 +13,9 @@ export TEST_VERBOSITY=0
 . /opt/homebrew/opt/asdf/libexec/asdf.sh # $(brew --prefix asdf)/libexec/asdf.sh
 # unset ASDF_DIR
 
+# eval "$(starship init zsh)"
+eval "$(/opt/homebrew/bin/starship init zsh)"
+
 # if [[ ! -f ~/.zpm/zpm.zsh ]]; then
 #     git clone --recursive https://github.com/zpm-zsh/zpm ~/.zpm
 # fi
