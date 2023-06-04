@@ -10,11 +10,14 @@ export TEST_VERBOSITY=0
 
 # Use asdf local ruby instead of rbenv
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh # $(brew --prefix asdf)/libexec/asdf.sh
+export PATH="/opt/homebrew/bin:$PATH"
+
+# brew install asdf
+# source /opt/homebrew/opt/asdf/libexec/asdf.sh #
+source $(brew --prefix asdf)/libexec/asdf.sh
 # unset ASDF_DIR
 
-# eval "$(starship init zsh)"
-eval "$(/opt/homebrew/bin/starship init zsh)"
+eval "$(starship init zsh)"
 
 # if [[ ! -f ~/.zpm/zpm.zsh ]]; then
 #     git clone --recursive https://github.com/zpm-zsh/zpm ~/.zpm
@@ -54,15 +57,13 @@ export HIST_STAMPS="yyyy.mm.dd"
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export NVM_DIR=~/.nvm
-
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export BAT_PAGER=" less -RFX --raw-control-chars"
 
 alias zshcfg="nano /Users/piotrwasiak/.zshrc"
 alias gitcfg="nano ~/.gitconfig"
-
-export BAT_PAGER=" less -RFX --raw-control-chars"
 
 # alias be='bundle exec'
 
@@ -72,7 +73,28 @@ source ~/.creds
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-export PATH="/opt/homebrew/bin:$PATH"
-
+# brew install zsh-syntax-highlighting
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# brew install zsh-autosuggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# brew install z
+source /opt/homebrew/etc/profile.d/z.sh
+
+
+# brew install zsh-completions
+# activate completions (example: >git `tab`  or  >git -`tab`):
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+    autoload -Uz compinit
+    # -i ignores not root and not current user files, skips question
+    compinit -i
+fi
+
+# You may also need to force rebuild `zcompdump`:
+#   rm -f ~/.zcompdump; compinit
+
+# Additionally, if you receive "zsh compinit: insecure directories" warnings when attempting
+# to load these completions, you may need to run this:
+
+#   chmod -R go-w '/opt/homebrew/share/zsh'
