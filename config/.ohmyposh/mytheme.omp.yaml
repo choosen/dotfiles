@@ -1,0 +1,88 @@
+---
+"$schema": https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+version: 2
+final_space: true
+shell_integration: true
+pwd: OSC 1337
+blocks:
+- type: rprompt
+  alignment: left
+  segments:
+  - type: text
+    style: diamond
+    foreground: "#ffffff"
+    background: "#cc3802"
+    leading_diamond: ""
+    template: "{{ if .Env.PNPPSHOST }}  {{ .Env.PNPPSHOST }} {{ end }}"
+  - type: text
+    style: powerline
+    powerline_symbol: ""
+    foreground: "#ffffff"
+    background: "#047e84"
+    template: "{{ if .Env.PNPPSSITE }}  {{ .Env.PNPPSSITE }}{{ end }}"
+  - type: text
+    style: diamond
+    foreground: "#ffffff"
+    background: "#047e84"
+    trailing_diamond: ""
+    template: "{{ if .Env.PNPPSSITE }} {{ end }}"
+- type: prompt
+  alignment: left
+  segments:
+  - type: session
+    style: diamond
+    foreground: "#ffffff"
+    background: "#9A348E"
+    leading_diamond: ""
+    template: "{{ .UserName }} "
+  - type: path
+    style: powerline
+    powerline_symbol: ""
+    foreground: "#ffffff"
+    background: "#DA627D"
+    template: " {{ .Path }} "
+    properties:
+      style: powerlevel # was folder by default
+  - type: git
+    style: powerline
+    powerline_symbol: ""
+    foreground: "#ffffff"
+    background: "#FCA17D"
+    template: " ➜ ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }}  {{ .StashCount
+      }}{{ end }}) "
+    properties:
+      branch_icon: ''
+      fetch_stash_count: true
+      fetch_status: false
+      fetch_upstream_icon: true
+  - type: node
+    style: powerline
+    powerline_symbol: ""
+    foreground: "#ffffff"
+    background: "#86BBD8"
+    template: "  {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{
+      .Full }} "
+  - type: ruby
+    style: powerline
+    powerline_symbol: 
+    foreground: "#ffffff"
+    background: "#4063D8"
+    template: "  {{ .Full }}"
+  - type: docker
+    style: powerline
+    powerline_symbol: 
+    foreground: "#000000"
+    background: "#0B59E7"
+    template: "  {{ .Context }} "
+  - type: iterm
+    interactive: true
+    style: plain
+    foreground: "#80ffea"
+    template: "{{ .PromptMark }}"
+  - type: python
+    style: powerline
+    powerline_symbol: 
+    display_mode: files
+    foreground: "#100e23"
+    background: "#906cff"
+    template: "  {{ .Full }} "
