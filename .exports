@@ -1,0 +1,40 @@
+# export GPG_TTY=$TTY
+export PATH="/opt/homebrew/bin:$PATH"
+
+export GPG_TTY=$(tty)
+
+# ZSH HISTORY SETUP
+
+# Immediate append history
+setopt INC_APPEND_HISTORY
+# turn on timestamps
+setopt EXTENDED_HISTORY
+# skip duplicates
+setopt HIST_FIND_NO_DUPS
+# not writing duplicates to the history file at all
+setopt HIST_IGNORE_ALL_DUPS
+export HISTTIMEFORMAT="[%F %T] "
+export HISTSIZE=100000
+export HISTFILESIZE=1000000000
+
+# For compilers to find curl you may need to set:
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/curl/lib/pkgconfig"
+
+export LANG=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export BAT_PAGER=" less -RFX --raw-control-chars"
+
+export RUBY_DEBUG_EDITOR=code
+# export RUBYOPT='--disable-did_you_mean'
+
+export NVM_DIR=~/.nvm
+
+# DOCKER_DEFAULT_PLATFORM=linux/amd64
+
+# PROJECT EXPORTS
+
+export TEST_VERBOSITY=0

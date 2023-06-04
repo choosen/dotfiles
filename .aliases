@@ -1,0 +1,23 @@
+alias zshcfg="nano /Users/piotrwasiak/.zshrc"
+alias gitcfg="nano ~/.gitconfig"
+# alias be='bundle exec'
+
+
+# https://github.com/mihaliak/dotfiles/blob/master/dots/.aliases
+
+alias .='pwd'
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias path='echo $PATH | tr -s ":" "\n"'
+
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+alias rmds="find . -type f -name '*.DS_Store' -ls -delete"
+
+alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;echo "✌️ DNS flushed"'
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+alias -g @="| grep -i"

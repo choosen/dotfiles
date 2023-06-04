@@ -1,65 +1,15 @@
-# export GPG_TTY=$TTY
-export GPG_TTY=$(tty)
-export RUBY_DEBUG_EDITOR=code
-# export RUBYOPT='--disable-did_you_mean'
-# DOCKER_DEFAULT_PLATFORM=linux/amd64
-
-# alias cat=bat
-
-export TEST_VERBOSITY=0
 
 # Use asdf local ruby instead of rbenv
 
-export PATH="/opt/homebrew/bin:$PATH"
-
-# ZSH HISTORY SETUP
-
-# Immediate append history
-setopt INC_APPEND_HISTORY
-# turn on timestamps
-setopt EXTENDED_HISTORY
-# skip duplicates
-setopt HIST_FIND_NO_DUPS
-# not writing duplicates to the history file at all
-setopt HIST_IGNORE_ALL_DUPS
-export HISTTIMEFORMAT="[%F %T] "
-export HISTSIZE=100000
-export HISTFILESIZE=1000000000
+source .exports
 
 # brew install asdf
 # source /opt/homebrew/opt/asdf/libexec/asdf.sh #
 source $(brew --prefix asdf)/libexec/asdf.sh
 # unset ASDF_DIR
 
-
-# For compilers to find curl you may need to set:
-export PATH="/opt/homebrew/opt/curl/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/curl/lib/pkgconfig"
-
+# brew install starship
 eval "$(starship init zsh)"
-
-# if [[ ! -f ~/.zpm/zpm.zsh ]]; then
-#     git clone --recursive https://github.com/zpm-zsh/zpm ~/.zpm
-# fi
-
-# source ~/.zpm/zpm.zsh
-
-# zpm load @omz
-# zpm load zpm-zsh/ls
-# zpm load @omz/git @omz/bundler
-# zpm load @omz/z \
-#           @omz/rails \
-#           @omz/git \
-#           @omz-lib/key-bindings \
-#           @omz-lib/completion \
-# 	  @omz/zsh-users/zsh-syntax-highlighting
-
-# those not typeprof disabled:
-####          @omz/asdf \
-#          @omz/ag
-#          @omz/heroku \
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -76,17 +26,6 @@ export HIST_STAMPS="yyyy.mm.dd"
 
 # # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-export NVM_DIR=~/.nvm
-export LANG=en_US.UTF-8
-export LC_CTYPE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-export BAT_PAGER=" less -RFX --raw-control-chars"
-
-alias zshcfg="nano /Users/piotrwasiak/.zshrc"
-alias gitcfg="nano ~/.gitconfig"
-
-# alias be='bundle exec'
 
 # creds
 
@@ -123,3 +62,5 @@ fi
 # integrate fzf with zsh.
 # CTRL + R (better history), CTRL + T (select file to choose instead of ** + TAB), ESC + C (fzf directories passed to cd)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source .aliases
