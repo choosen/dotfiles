@@ -17,7 +17,12 @@ export PATH="/opt/homebrew/bin:$PATH"
 source $(brew --prefix asdf)/libexec/asdf.sh
 # unset ASDF_DIR
 
-eval "$(starship init zsh)"
+# starship
+# eval "$(starship init zsh)"
+
+# OhMyPosh
+export ITERM2_SQUELCH_MARK=1
+eval "$(oh-my-posh init zsh --config ~/config/.ohmyposh/mytheme.omp.yaml)"
 
 # if [[ ! -f ~/.zpm/zpm.zsh ]]; then
 #     git clone --recursive https://github.com/zpm-zsh/zpm ~/.zpm
