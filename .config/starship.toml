@@ -18,6 +18,8 @@ $docker_context\
 [](fg:#06969A)\
 """
 
+right_format = """$cmd_duration"""
+
 # $c\
 # $scala\
 # $nim\
@@ -29,7 +31,7 @@ $docker_context\
 # $haskell\
 
 
-# was also time
+# was also time in theme, but in Iterm you can take: View > Show timestamps
 # $time\
 # [ ](fg:#33658A)\
 
