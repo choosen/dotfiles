@@ -3,6 +3,16 @@ alias gitcfg="nano ~/.gitconfig"
 
 alias be='bundle exec'
 
+# type in console: development.log to open it with code
+alias -s rb=code
+alias -s yml=code
+alias -s yaml=code
+alias -s md=code
+alias -s json=code
+alias -s rake=code
+
+alias -s log='less +G'
+
 # rails
 
 alias rc='rails console'

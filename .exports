@@ -17,6 +17,9 @@ export HISTTIMEFORMAT="[%F %T] "
 export HISTSIZE=100000
 export HISTFILESIZE=1000000000
 
+# ZSH offer correcting wrong commands: sl -> offer ls
+setopt correct
+
 # For compilers to find curl you may need to set:
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
