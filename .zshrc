@@ -1,7 +1,7 @@
 
 # Use asdf local ruby instead of rbenv
 
-source .exports
+source ~/.exports
 
 # brew install asdf
 # source /opt/homebrew/opt/asdf/libexec/asdf.sh #
@@ -63,4 +63,4 @@ fi
 # CTRL + R (better history), CTRL + T (select file to choose instead of ** + TAB), ESC + C (fzf directories passed to cd)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source .aliases
+source ~/.aliases
