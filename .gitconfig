@@ -1,3 +1,5 @@
+[init]
+  defaultBranch = main
 [color]
 	ui = true
 [user]
@@ -7,7 +9,8 @@
 	signingkey = 11B8A99485E02B8D
 
 [commit]
-#	gpgSign = true
+  #	gpgSign = true
+  template = ~/.gitmessage
 [gc]
 	autoDetach = false
 [alias]
@@ -22,6 +25,7 @@
 [core]
 	excludesfile = /Users/piotrwasiak/.gitignore_global
 	attributesfile = /Users/piotrwasiak/.gitattributes
+	autocrlf = input
 [push]
   default = current
 	autoSetupRemote = true
@@ -29,7 +33,7 @@
   colorMoved = default
 [merge]
   conflictstyle = diff3
-  # ff = true
+  ff = only
 [pull]
 	rebase = false
 [diff "rspec"]

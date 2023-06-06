@@ -1,5 +1,6 @@
 # export GPG_TTY=$TTY
 export PATH="/opt/homebrew/bin:$PATH"
+export HOMEBREW_NO_ANALYTICS=1
 
 export GPG_TTY=$(tty)
 
@@ -10,7 +11,7 @@ setopt INC_APPEND_HISTORY
 # turn on timestamps
 setopt EXTENDED_HISTORY
 # skip duplicates
-setopt HIST_FIND_NO_DUPS
+# setopt HIST_FIND_NO_DUPS
 # not writing duplicates to the history file at all
 setopt HIST_IGNORE_ALL_DUPS
 export HISTTIMEFORMAT="[%F %T] "
