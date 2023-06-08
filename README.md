@@ -54,3 +54,6 @@ z (jump to the most used locations by ex: project name)
 ## Way of maintaining my dotfiles
 Managing dotfiles with git initiated in home folder (~). Ignoring all files and adding them with --force option:
 https://drewdevault.com/2019/12/30/dotfiles.html
+
+## My findings about OhMyPosh
+- completition in zsh did not work well (prompt was jumping to center of the screen). Beside that it seemed to be quite good project
