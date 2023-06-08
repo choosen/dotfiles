@@ -45,7 +45,7 @@ z (jump to the most used locations by ex: project name)
 - define common exports @ ~/.exports
 
 ## Ruby extensions
-- Define object #local_methods to list only defined there methods
+- Define object _#local_methods_ to list only defined there methods
 - copy(str) to clipboard
 - paste from clipboard to console (fast for long texts, causing terminal slow paste)
 - AwesomePrint Hash formatter for hashes (I have to switch to [amazing_print](https://github.com/amazing-print/amazing_print)). AwesomePrint setup @ .aprc
