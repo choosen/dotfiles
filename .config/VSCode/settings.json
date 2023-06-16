@@ -1,0 +1,134 @@
+{
+    "atomKeymap.promptV3Features": true,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    // "eslint.run": "onSave",
+    // "eslint.alwaysShowStatus": true,
+    "css.validate": false,
+    "scss.validate": false,
+    "editor.fontFamily": "Hack",
+    //  Hack,, 'FiraCode-Medium', 'JetBrains Mono', 'FiraCode-Light', Menlo, Monaco, 'Courier New', monospace
+    // "'ss01', 'ss02', 'ss03', 'ss06', 'zero', 'hack"
+    "editor.fontLigatures": true,
+    "editor.fontSize": 13,
+    "editor.rulers": [80, 100],
+    "editor.tabSize": 2,
+    "editor.guides.bracketPairs": true,
+    "terminal.integrated.gpuAcceleration": "auto",
+    "editor.trimAutoWhitespace": false,
+    "editor.cursorBlinking":"smooth",
+    "editor.cursorStyle": "line-thin",
+    "debug.showBreakpointsInOverviewRuler": true,
+    "files.insertFinalNewline": false,
+    "files.defaultLanguage": "activeEditorLanguage",
+    "gitlens.telemetry.enabled": false,
+    "telemetry.telemetryLevel": "off",
+    "ruby.intellisense": "rubyLocate",
+    "ruby.useLanguageServer": true,
+    "ruby.locate": {
+        "exclude": "{**/@(tmp.*),**/@(tmp.*)/**}",
+        "include": "**/*.rb"
+    },
+    "solargraph.useBundler": true,
+    "[javascript]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[ruby]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "mbessey.vscode-rufo",
+    },
+    "ruby.format": "rubocop",
+    "search.smartCase": true,
+    "terminal.external.osxExec": "iTerm.app",
+    "workbench.iconTheme": "vscode-great-icons",
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value" : 10,
+    "workbench.activityBar.visible": true,
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#0f030340",
+        "editorIndentGuide.activeBackground": "#dbdb86C2",
+        "editorWarning.foreground": "#FFF",
+        // "editorWarning.border": "#FF0",
+        // "editorInfo.border": "#012",
+        "editorInfo.foreground": "#01F"
+    },
+    // "typeprof.server.path": "/Users/piotrwasiak/.rbenv/versions/3.1.0-preview1/bin/typeprof",
+    "ruby.lint": {
+        "reek": false,
+        "rubocop": true,
+        "ruby": true, //Runs ruby -wc
+        "fasterer": true,
+        "debride": false,
+        "ruby-lint": false
+    },
+    "gitlens.keymap": "alternate",
+    "[markdown]": {
+        "files.trimTrailingWhitespace": false
+    },
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+    },
+    "workbench.startupEditor": "newUntitledFile",
+    "breadcrumbs.enabled": true,
+    // "editor.fontWeight": "400",
+    "gitlens.views.repositories.avatars": false,
+    "[json]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "js/ts.implicitProjectConfig.experimentalDecorators": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": true
+    },
+    "diffEditor.renderSideBySide": false,
+    "editor.renderControlCharacters": false,
+    "editor.columnSelection": false,
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "extensions.ignoreRecommendations": false,
+    "editor.minimap.enabled": false,
+    "redhat.telemetry.enabled": false,
+    "editor.renderFinalNewline": "off",
+    "files.exclude": {
+        ".byebug_history": true,
+        ".irb_history": true,
+        "**/ruby": true,
+        "*/**/build/": true,
+        "*/**/cache/": true,
+        "*/**/node_modules/": true,
+        "*/**/uploads/": true
+    },
+    "files.watcherExclude": {
+        ".byebug_history": true,
+        "tmp/": true,
+        "coverage": true,
+    },
+    "search.exclude": {
+        ".byebug_history": true,
+        "tmp/": true,
+        "coverage": true,
+    },
+    "sql-formatter.dialect": "pl/sql",
+    "sql-formatter.uppercase": true,
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.enableBell": true,
+    "git.enableCommitSigning": true,
+    "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font, MesloLGS NF",
+    "search.searchOnTypeDebouncePeriod": 200,
+    "search.useGlobalIgnoreFiles": true,
+    "ruby.lintDebounceTime": 1000,
+    "workbench.colorTheme": "Monokai",
+    "files.trimTrailingWhitespace": true,
+    "solargraph.bundlerPath": "/Users/piotrwasiak/.asdf/shims/solargraph"
+}

@@ -1,4 +1,3 @@
-
 # Use asdf local ruby instead of rbenv
 
 source ~/.exports
@@ -64,3 +63,16 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source ~/.aliases
+
+# Cursor is a Block:
+# echo -e -n "\x1b[\x31 q" # Blinking
+# echo -e -n "\x1b[\x32 q" # Steady
+
+# Cursor is a underscore
+echo -e -n "\x1b[\x33 q"
+# Blinking
+# echo -e -n "\x1b[\x34 q" # Steady
+
+# Cursor is a vertical line
+# echo -e -n "\x1b[\x35 q" # Blinking
+# echo -e -n "\x1b[\x36 q" # Steady

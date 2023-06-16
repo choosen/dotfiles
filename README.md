@@ -57,7 +57,19 @@ Managing dotfiles with git initiated in home folder (~). Ignoring all files and 
 https://drewdevault.com/2019/12/30/dotfiles.html
 
 ## Tools installation
-I did not provided script to install required libs from brew. It's on my todo list. I install them with brew.
+
+Warning: If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!
+
+Brew and packages can be installed with: `~/dotfiles/brew_install.sh`
+Mac os first setup: `~/.config/macos_setup.sh`
+
+For developing I use [Hack](https://github.com/source-foundry/Hack) font.
+In terminal: [CaskaydiaCove Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/CascadiaCode)
+
+VSCode config has to be symlinked: `ln -s ~/.config/VSCode/settings.json ~/Library/Application\ Support/Code/User/settings.json`
+
+## Issues
+- iTerm is displaying wrong last command @ starship and does not provide option to repeat last command/copy output with right mouse click
 
 ## My findings about OhMyPosh
 - completition in zsh did not work well (prompt was jumping to center of the screen). Beside that it seemed to be quite good project

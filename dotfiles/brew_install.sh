@@ -1,0 +1,63 @@
+# Install Homebrew
+
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew update
+brew upgrade
+
+# Install packages
+brew install htop
+brew install openssl
+brew install openssh
+brew install git
+brew install git-delta
+brew install wget
+brew install unrar
+
+brew install starship
+# brew install powerlevel10k
+
+brew install zsh
+brew install zsh-syntax-highlighting
+brew install zsh-autosuggestions
+brew install zsh-history-substring-search # ?
+brew install z
+brew install zsh-completions
+
+brew install bat
+brew install curl
+brew install exa
+brew install fzf
+brew install jq
+brew install tldr
+brew install redis
+brew install asdf
+brew install tmux
+
+echo "Success! Basic brew packages are installed."
+
+# Cask
+brew tap caskroom/cask
+brew install brew-cask
+brew tap caskroom/versions
+
+# Install cask packages
+
+brew install --cask --appdir="/Applications" google-chrome
+brew install --cask --appdir="/Applications" slack
+brew install --cask --appdir="/Applications" spotify
+brew install --cask --appdir="/Applications" sublime-text
+brew install --cask --appdir="/Applications" postman
+brew install --cask --appdir="/Applications" docker
+brew install --cask --appdir="/Applications" brave-browser
+brew install --cask --appdir="/Applications" flux
+brew install --cask --appdir="/Applications" iterm2
+
+brew install --cask ngrok
+brew install --cask --appdir="/Applications" vlc
+brew install --cask --appdir="/Applications" tunnelblick
+brew install --cask --appdir="/Applications" visual-studio-code
+
+
+echo "Success! Brew additional applications are installed."
+# Remove outdated versions from the cellar.
+brew cleanup
