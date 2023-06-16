@@ -32,6 +32,7 @@ Before I installed [powerlevel10k](https://github.com/romkatv/powerlevel10k) whi
 - zsh history limits are bumped, stored with timestamps and remove duplicates
 - visual studio code set as debugger editor (in .exports)
 - bat for git diff (cat on steroids)
+- exa replaces ls, with community aliases
 
 I resigned from omzh and load all scripts by myself:
 zsh-syntax-highlighting
