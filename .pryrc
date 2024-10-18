@@ -6,10 +6,20 @@ Pry::Commands.command /^$/, "repeat last command" do
   pry_instance.run_command Pry.history.to_a.last
 end
 
-Pry.config.history.file = ".pry_history" rescue StandardźError
+Pry.config.history.file = ".pry_history" rescue nil
 Pry.config.history_file = ".pry_history"
 
 ActiveRecord::Base.logger = Logger.new(STDOUT) if defined?(ActiveRecord::Base)
+
+
+require 'rb-readline'
+require 'readline'
+if defined?(RbReadline)
+  def RbReadline.rl_reverse_search_history(sign, key)
+    rl_insert_text  `cat ~/.pry_history | fzf --tac |  tr '\n' ' '`
+  end
+end
+
 
 module ObjectLocalMethods
   def local_methods(include_superclasses = true)
@@ -20,7 +30,7 @@ Object.send(:extend,  ObjectLocalMethods)
 Object.send(:include, ObjectLocalMethods)
 
 module Kernel
-  def copy(str)
+  def pbcopy(str)
     IO.popen('pbcopy', 'w') { |f| f << str.to_s }
     str
   end

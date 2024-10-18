@@ -1,6 +1,8 @@
 # Install Homebrew
 
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 brew update
 brew upgrade
 
@@ -25,12 +27,14 @@ brew install zsh-completions
 
 brew install bat
 brew install curl
-brew install exa
+brew install eza
 brew install fzf
 brew install jq
 brew install tldr
 brew install redis
-brew install asdf
+# brew install asdf
+brew install mise
+# brew install nix # not yet
 brew install tmux
 
 echo "Success! Basic brew packages are installed."
@@ -45,7 +49,7 @@ brew tap caskroom/versions
 brew install --cask --appdir="/Applications" google-chrome
 brew install --cask --appdir="/Applications" slack
 brew install --cask --appdir="/Applications" spotify
-brew install --cask --appdir="/Applications" sublime-text
+# brew install --cask --appdir="/Applications" sublime-text
 brew install --cask --appdir="/Applications" postman
 brew install --cask --appdir="/Applications" docker
 brew install --cask --appdir="/Applications" brave-browser
@@ -56,6 +60,9 @@ brew install --cask ngrok
 brew install --cask --appdir="/Applications" vlc
 brew install --cask --appdir="/Applications" tunnelblick
 brew install --cask --appdir="/Applications" visual-studio-code
+
+brew install --cask font-hack-nerd-font
+brew install --cask font-caskaydia-cove-nerd-font
 
 
 echo "Success! Brew additional applications are installed."

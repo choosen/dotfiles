@@ -9,6 +9,12 @@ source $(brew --prefix asdf)/libexec/asdf.sh
 
 # brew install starship
 eval "$(starship init zsh)"
+eval "$(direnv hook zsh)"
+
+function set_win_title(){
+    echo -ne "\033]0; $(basename "$PWD") \007"
+}
+starship_precmd_user_func="set_win_title"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -36,8 +42,8 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # brew install zsh-autosuggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-# brew install z
-source /opt/homebrew/etc/profile.d/z.sh
+# zoxide (z replacement)
+eval "$(zoxide init zsh)"
 
 
 # brew install zsh-completions

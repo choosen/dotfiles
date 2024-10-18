@@ -22,6 +22,7 @@
   # st = status --short
   # co = checkout
   # aa = add --all
+  sl = stash list --date=relative
 [core]
 	excludesfile = /Users/piotrwasiak/.gitignore_global
 	attributesfile = /Users/piotrwasiak/.gitattributes
@@ -48,6 +49,8 @@
 [interactive]
     diffFilter = delta --color-only --features=interactive
 
+[blame]
+    ignoreRevsFile = .git-blame-ignore-revs
 [delta]
     features = decorations navigate
     line-numbers = true
@@ -70,3 +73,8 @@
 	patterns = (\"|')?(AWS|aws|Aws)?_?(ACCOUNT|account|Account)_?(ID|id|Id)?(\"|')?\\s*(:|=>|=)\\s*(\"|')?[0-9]{4}\\-?[0-9]{4}\\-?[0-9]{4}(\"|')?
 	allowed = AKIAIOSFODNN7EXAMPLE
 	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

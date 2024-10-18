@@ -25,7 +25,7 @@ Powerlevel:
 I picked up [pastel powerline](https://starship.rs/presets/#pastel-powerline) theme , and disabled time as I don't use full screen so much in terminal (not vim poweruser)
 Before I installed [powerlevel10k](https://github.com/romkatv/powerlevel10k) which is decent option also.
 - ruby/rails setup and console enhancements
-- asdf to manage language versions of ruby/node etc
+- ~asdf~ mise to manage language versions of ruby/node etc
 - brew integration
 - fzf integration, replacing search in shell history and fast jumps
 - psql prompt setup from thoughbot dotfiles
@@ -65,6 +65,10 @@ Mac os first setup: `~/.config/macos_setup.sh`
 
 For developing I use [Hack](https://github.com/source-foundry/Hack) font.
 In terminal: [CaskaydiaCove Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/CascadiaCode)
+```bash
+brew install --cask font-hack-nerd-font
+brew install --cask font-caskaydia-cove-nerd-font
+```
 
 VSCode config has to be symlinked: `ln -s ~/.config/VSCode/settings.json ~/Library/Application\ Support/Code/User/settings.json`
 

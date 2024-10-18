@@ -18,6 +18,10 @@ export HISTTIMEFORMAT="[%F %T] "
 export HISTSIZE=100000
 export HISTFILESIZE=1000000000
 
+export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type d --ignore-file ~/.config/fd/cd_ignore"
+
 # ZSH offer correcting wrong commands: sl -> offer ls
 setopt correct
 
@@ -33,6 +37,8 @@ export LC_ALL=en_US.UTF-8
 export BAT_PAGER=" less -RFX --raw-control-chars"
 
 export RUBY_DEBUG_EDITOR=code
+# bundle open gem_name  - to show source of it with VSCode
+export BUNDLER_EDITOR=code
 # export RUBYOPT='--disable-did_you_mean'
 
 export NVM_DIR=~/.nvm
@@ -42,3 +48,6 @@ export NVM_DIR=~/.nvm
 # PROJECT EXPORTS
 
 export TEST_VERBOSITY=0
+
+# https://build.betterup.com/one-weird-trick-that-will-speed-up-your-bundle-install/
+export MAKE="make -j $(nproc)"

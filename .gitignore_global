@@ -2,17 +2,23 @@
 .cache
 dist
 .vscode
+lambda-and-connectors.code-workspace
 
 .byebug_history
 .pry_history
 .irb_history
 
 .rspec_parallel
+.env.test.local
 
+.git-blame-ignore-revs
+
+config/initializers/000_custom_pw.rb
 .pryrc
 .irbrc
 
 .env
+.envrc
 tmp
 
 db/*.dump
@@ -37,3 +43,10 @@ config/ssl
 /coverage
 .tool-versions
 *.zip
+/**/.asdfrc
+
+localhost.crt
+localhost.csr
+localhost.key
+
+spec/vcr_cassettes/shared/*.xml
