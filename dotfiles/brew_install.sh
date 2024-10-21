@@ -1,7 +1,9 @@
 # Install Homebrew
 
-# ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" # obsolete
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew update
 brew upgrade
@@ -26,16 +28,22 @@ brew install z
 brew install zsh-completions
 
 brew install bat
+brew install micro
+brew install gping
 brew install curl
 brew install eza
 brew install fzf
 brew install jq
 brew install tldr
 brew install redis
+brew install direnv
+brew install zoxide
+brew install tmux
+
+# package managers
 # brew install asdf
 brew install mise
 # brew install nix # not yet
-brew install tmux
 
 echo "Success! Basic brew packages are installed."
 
@@ -57,9 +65,12 @@ brew install --cask --appdir="/Applications" flux
 brew install --cask --appdir="/Applications" iterm2
 
 brew install --cask ngrok
+brew install --cask --appdir="/Applications" jumpcut # copyclip from appStore was nicer..
 brew install --cask --appdir="/Applications" vlc
 brew install --cask --appdir="/Applications" tunnelblick
 brew install --cask --appdir="/Applications" visual-studio-code
+brew install --cask --appdir="/Applications" cursor
+brew install --cask --appdir="/Applications" rubymine
 
 brew install --cask font-hack-nerd-font
 brew install --cask font-caskaydia-cove-nerd-font

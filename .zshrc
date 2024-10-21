@@ -1,15 +1,16 @@
-# Use asdf local ruby instead of rbenv
+# fix missing nproc in mac
+# alias nproc="sysctl -n hw.logicalcpu"
 
 source ~/.exports
 
 # brew install asdf
 # source /opt/homebrew/opt/asdf/libexec/asdf.sh #
-source $(brew --prefix asdf)/libexec/asdf.sh
+# source $(brew --prefix asdf)/libexec/asdf.sh
 # unset ASDF_DIR
 
 # brew install starship
 eval "$(starship init zsh)"
-eval "$(direnv hook zsh)"
+# eval "$(direnv hook zsh)" # rely on mise envs
 
 function set_win_title(){
     echo -ne "\033]0; $(basename "$PWD") \007"
@@ -82,3 +83,4 @@ echo -e -n "\x1b[\x33 q"
 # Cursor is a vertical line
 # echo -e -n "\x1b[\x35 q" # Blinking
 # echo -e -n "\x1b[\x36 q" # Steady
+eval "$(mise activate)"

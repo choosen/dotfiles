@@ -49,5 +49,6 @@ export NVM_DIR=~/.nvm
 
 export TEST_VERBOSITY=0
 
+# crashing sometimes on installing ruby ie. with mise
 # https://build.betterup.com/one-weird-trick-that-will-speed-up-your-bundle-install/
-export MAKE="make -j $(nproc)"
+# export MAKE="make -j $(nproc)"
