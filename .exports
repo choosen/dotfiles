@@ -18,6 +18,9 @@ export HISTTIMEFORMAT="[%F %T] "
 export HISTSIZE=100000
 export HISTFILESIZE=1000000000
 
+# for git diffs of credentials
+export EDITOR="nano"
+
 export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type d --ignore-file ~/.config/fd/cd_ignore"

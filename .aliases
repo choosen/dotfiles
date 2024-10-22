@@ -1,6 +1,5 @@
-alias zshcfg="nano /Users/piotrwasiak/.zshrc"
+alias zshcfg="nano ~/.zshrc"
 alias gitcfg="nano ~/.gitconfig"
-
 alias sshcfg='nano ~/.ssh/config'
 
 SSH_START_SCRIPT_COMMAND='docker exec -it docker-compose_sidekiq_1 rails c'

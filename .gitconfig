@@ -32,6 +32,9 @@
 	autoSetupRemote = true
 [diff]
   colorMoved = default
+  textconv = rails encrypted:show
+  cachetextconv = false
+  # rails credentials:diff --enroll  # to enable diffs of credentials
 [merge]
   conflictstyle = diff3
   ff = only
