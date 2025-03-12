@@ -39,6 +39,7 @@ brew install redis
 brew install direnv
 brew install zoxide
 brew install tmux
+brew install shellcheck
 
 # package managers
 # brew install asdf
