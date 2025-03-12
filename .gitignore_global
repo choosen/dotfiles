@@ -4,6 +4,10 @@ dist
 .vscode
 lambda-and-connectors.code-workspace
 
+**/*.key
+
+.gitattributes
+
 .byebug_history
 .pry_history
 .irb_history
@@ -39,6 +43,7 @@ app/redux/user/tests/__snapshots__/
 package-lock.json
 config/ssl
 .ruby-version
+mise.toml
 # .nvmrc
 /coverage
 .tool-versions

@@ -24,8 +24,8 @@
   # aa = add --all
   sl = stash list --date=relative
 [core]
-	excludesfile = /Users/piotrwasiak/.gitignore_global
-	attributesfile = /Users/piotrwasiak/.gitattributes
+	excludesfile = ~/.gitignore_global
+	attributesfile = ~/.gitattributes
 	autocrlf = input
 [push]
   default = current

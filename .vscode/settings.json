@@ -1,3 +1,12 @@
 {
-  "editor.fontFamily": "CaskaydiaCove Nerd Font, MesloLGS NF"
+  "editor.fontFamily": "CaskaydiaCove Nerd Font, MesloLGS NF",
+  "debug.javascript.defaultRuntimeExecutable": {
+    "pwa-node": "/Users/choosen/.local/share/mise/shims/node"
+  },
+  "rubyLsp.rubyVersionManager": {
+    "identifier": "mise"
+  },
+  "rdbg.rubyVersionManager": "mise",
+  "sql-formatter.dialect": "pl/sql",
+  "sql-formatter.uppercase": true,
 }

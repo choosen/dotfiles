@@ -9,7 +9,7 @@
     "editor.fontFamily": "Hack",
     //  Hack,, 'FiraCode-Medium', 'JetBrains Mono', 'FiraCode-Light', Menlo, Monaco, 'Courier New', monospace
     // "'ss01', 'ss02', 'ss03', 'ss06', 'zero', 'hack"
-    "editor.fontLigatures": true,
+    "editor.fontLigatures": false,
     "editor.fontSize": 13,
     "editor.rulers": [80, 100],
     "editor.tabSize": 2,
@@ -35,8 +35,8 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[ruby]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "mbessey.vscode-rufo",
+        // "editor.formatOnSave": true,
+        // "editor.defaultFormatter": "mbessey.vscode-rufo",
     },
     "ruby.format": "rubocop",
     "search.smartCase": true,
@@ -92,7 +92,7 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
     },
     "extensions.ignoreRecommendations": false,
     "editor.minimap.enabled": false,
@@ -128,9 +128,52 @@
     "ruby.lintDebounceTime": 1000,
     "workbench.colorTheme": "Monokai",
     "files.trimTrailingWhitespace": true,
-    "solargraph.bundlerPath": "/Users/piotrwasiak/.asdf/shims/solargraph",
+    // "solargraph.bundlerPath": "/Users/piotrwasiak/.asdf/shims/solargraph",
     "terminal.integrated.enableVisualBell": true,
     "accessibility.signals.terminalBell": {
         "sound": "on"
-    }
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    },
+    "rubyLsp.customRubyCommand": "eval \\\"$(mise env -s zsh)\\\"",
+    "rubyLsp.rubyVersionManager": {
+        "miseExecutablePath": "/opt/homebrew/bin/mise"
+    },
+    "rubyLsp.enabledFeatures": {
+
+        "codeActions": true,
+        "diagnostics": true,
+        "documentHighlights": true,
+        "documentLink": true,
+        "documentSymbols": true,
+        "foldingRanges": true,
+        "formatting": true,
+        "hover": true,
+        "inlayHint": true,
+        "onTypeFormatting": true,
+        "selectionRanges": true,
+        "semanticHighlighting": true,
+        "completion": true,
+        "codeLens": true,
+        "definition": true,
+        "workspaceSymbol": true,
+        "signatureHelp": true,
+        "typeHierarchy": true
+    },
+    "rubyLsp.featuresConfiguration": {
+
+    },
+    "rubyLsp.featureFlags": {
+
+    },
+    "editor.formatOnSaveMode": "file",
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "simplecov.coverageDecorator": {
+        "coveredHighlightColor": "rgba(64,128,128,0.05)",
+        "coveredGutterStyle": "verticalgreen"
+    },
+    "simplecov.coverageOptions": "showUncoveredCodeOnly"
 }
