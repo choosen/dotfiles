@@ -32,7 +32,7 @@ Before I installed [powerlevel10k](https://github.com/romkatv/powerlevel10k) whi
 - zsh history limits are bumped, stored with timestamps and remove duplicates
 - visual studio code set as debugger editor (in .exports)
 - bat for git diff (cat on steroids)
-- exa replaces ls, with community aliases
+- eza replaces ls, with community aliases
 
 I resigned from omzh and load all scripts by myself:
 zsh-syntax-highlighting
@@ -73,7 +73,7 @@ brew install --cask font-caskaydia-cove-nerd-font
 VSCode config has to be symlinked: `ln -s ~/.config/VSCode/settings.json ~/Library/Application\ Support/Code/User/settings.json`
 
 ## Issues
-- iTerm is displaying wrong last command @ starship and does not provide option to repeat last command/copy output with right mouse click
+- none
 
 ## My findings about OhMyPosh
 - completition in zsh did not work well (prompt was jumping to center of the screen). Beside that it seemed to be quite good project
