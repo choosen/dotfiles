@@ -64,6 +64,9 @@ brew install --cask --appdir="/Applications" docker
 brew install --cask --appdir="/Applications" brave-browser
 brew install --cask --appdir="/Applications" flux
 brew install --cask --appdir="/Applications" iterm2
+brew install --cask --appdir="/Applications" karabiner-elements
+brew install --cask --appdir="/Applications" dbeaver-community
+
 
 brew install --cask ngrok
 brew install --cask --appdir="/Applications" jumpcut # copyclip from appStore was nicer..
