@@ -44,6 +44,9 @@ alias rc='rails console'
 alias rs='rails server'
 alias rr='rails routes'
 
+# say poland voice
+alias sayp='say -v "Zosia (enhanced)"'
+
 # https://github.com/mihaliak/dotfiles/blob/master/dots/.aliases
 
 alias .='pwd'
